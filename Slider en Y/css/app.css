@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+body {
+  background-color: #ececec;
+  font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+
+.slider {
+  width: 90%;
+  background-color: aqua;
+  overflow: hidden;
+  border-radius: 1em;
+  position: relative;
+}
+
+.slider .contenedor {
+  width: calc( 100% * 3 );
+  background-color: red;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: initial;
+  transition: all 0.5s ease;
+}
+
+.slider .img {
+  width: calc( 100% / 3 );
+  max-height: 500px;
+}
+
+.slider .ul {
+  width: 100%;
+  min-height: 40px;
+  position: absolute;
+  bottom: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+
+.slider .ul .li {
+  width: 1.4em;
+  height: 1.4em;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 0 0.7em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.slider .ul .li:hover {
+  transform: scale(0.9);
+}
+
+.slider .ul .li.ver {
+  background-color: white;
+}
+
+.slider .flecha {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: calc( 50% - 15px );
+  font-size: 3em;
+  color: black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+
+.slider .flecha.siguiente {
+  right: 0;
+}
+
+.slider .flecha.anterior {
+  left: 0;
+}

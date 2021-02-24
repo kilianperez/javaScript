@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+video {
+  display: flex;
+  object-fit: cover;
+  object-position: center center;
+}
+
+audio {
+  display: flex;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: normal normal normal 100%/140% Fakt Pro Medium, "Roboto", sans-serif;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
+
+form input,
+form textarea,
+form select {
+  font: inherit;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  -webkit-appearance: none;
+          appearance: none;
+  display: block;
+}
+
+.char {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #161616;
+}
+
+.char__nav {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+}
+
+.char__ul {
+  width: 75%;
+  height: 4em;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.char__li {
+  margin: 0 1em 0 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.char__opt {
+  margin: 0 0.1em 0 0;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.char__sub {
+  width: initial;
+  margin: 1.5em 0 0;
+  font-size: 1em;
+  display: inline-block;
+}
+
+.char__opt,
+.char__sub {
+  color: #c9c9c9;
+  opacity: 0.3;
+  transition: all 0.5s ease-out;
+}
+
+.char__li:hover .char__opt,
+.char__li:hover .char__sub {
+  color: #c9c9c9;
+  opacity: 1;
+}
+
+.char__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+.char__img.ver {
+  opacity: 1;
+}
